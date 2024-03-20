@@ -11,7 +11,7 @@ export default function NewGoal({ handleAddGoal }: NewGoalProp) {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const goalValue = goalRef.current!.value;
-    const summaryValue = goalRef.current!.value;
+    const summaryValue = summaryRef.current!.value;
     if (goalValue.length <= 0) {
       setGoalError(true);
     } else {
@@ -23,7 +23,7 @@ export default function NewGoal({ handleAddGoal }: NewGoalProp) {
     } else {
       setsummaryError(false);
     }
-    if (summaryValue.length > 0 && goalValue.length > 0) {
+    if (goalValue.length >= 1 && summaryValue.length >= 1) {
       handleAddGoal(goalValue, summaryValue);
       event.currentTarget.reset();
     }
