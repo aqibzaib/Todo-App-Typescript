@@ -35,8 +35,7 @@ export default function App() {
         <h1>Your Goals here</h1>
       </Header>
       <NewGoal handleAddGoal={handleAddGoal} />
-
-      {/* <button onClick={handleAddGoal}>Add Goal</button> */}
+      <br />
       <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal} />
     </main>
   );
