@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import  { type ReactNode } from "react";
 import CourseGoal from "./CourseGoal";
 import { type CourseGoal as CGoal } from "../App";
 import InfoBox from "./InfoBox";
